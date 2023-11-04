@@ -37,7 +37,7 @@ export default function Usuarios({title, data, isAdmin}){
                     data.map((user, key) => {
                         return(
                             <SwiperSlide>
-                                <a className={Styles.containerUser} key={key} href='/usuario/:id'>
+                                <a className={Styles.containerUser} key={key} href={`/usuario/${user.id}`}>
                                     <section className={Styles.userCont}>
                                         <img
                                             src={icons.user}
