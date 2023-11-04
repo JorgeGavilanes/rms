@@ -34,9 +34,9 @@ export default function Usuarios({title, data, isAdmin}){
                 className={`mySwiper ${Styles.containerUsers}`}
             >
                 {
-                    data.map((user) => {
+                    data.map((user, key) => {
                         return(
-                            <SwiperSlide>
+                            <SwiperSlide key={key}>
                                 <a className={Styles.containerUser} href="/usuario/id">
                                     <section className={Styles.userCont}>
                                         <img
