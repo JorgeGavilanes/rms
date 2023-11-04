@@ -1,0 +1,38 @@
+.userComponent{
+    display: flex;
+    gap: 1em;
+}
+
+.userCont{
+    background-color: var(--fondo);
+    width: 2.8em;
+    height: 2.8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2.5em;
+}
+
+.userIcon{
+    width: 2em;
+}
+
+.saludoCont{
+    display: flex;
+    color: #0000005a;
+    gap: .3em;
+    align-items: center;
+}
+
+.saludo{
+    font-size: 0.8em;
+}
+
+.happy{
+    width: 1em;
+}
+
+.userName{
+    color: var(--celeste);
+    font-size: 1.1em;
+}

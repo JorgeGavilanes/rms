@@ -1,0 +1,15 @@
+.enlace{
+    color: var(--celesteClaro);
+    font-size: 1em;
+    transition: all 300ms ease;
+    display: flex;
+    align-items: center;
+}
+
+.enlace:hover{
+    color: var(--celeste);
+}
+
+.enlace:hover img{
+    filter: invert(37%) sepia(41%) saturate(2839%) hue-rotate(179deg) brightness(94%) contrast(101%);
+}

@@ -1,0 +1,17 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .625em;
+    padding: 1.25em 1.56em;
+}
+
+.img{
+    width: 4em;
+    border-radius: 1.25em;
+}
+
+.title{
+    font-size: 1.5em;
+    font-weight: 500;
+}

@@ -1,0 +1,40 @@
+.container{
+    position: relative;
+}
+
+.imgContainer{
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.img{
+    width: 15em;
+    cursor: grab;
+}
+
+.img:active{
+    cursor: grabbing;
+}
+
+.icon{
+    width: 1.87em;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.left{
+    left: 0;
+}
+
+.right{
+    right: 0;
+}
+
+@media screen and (min-width: 380px) {
+    .img{
+        width: 20em;
+    }
+}

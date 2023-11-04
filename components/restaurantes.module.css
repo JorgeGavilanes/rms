@@ -1,0 +1,6 @@
+.container{
+    padding: 1.25em 1.56em;
+    background-color: var(--fondo);
+    border-radius: 1em;
+    margin: calc(.25em / 2) 1.56em;
+}

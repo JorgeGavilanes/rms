@@ -1,0 +1,266 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.25em 1.56em;
+}
+
+.logo{
+    height: 1.56em;
+}
+
+.icon{
+    width: 1em;
+    margin-left: 5px;
+    transform: scaleX(-1);
+    filter: invert(50%) sepia(90%) saturate(866%) hue-rotate(174deg) brightness(88%) contrast(95%);
+    transition: all 300ms ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.navAuth{
+    padding: 1.25em 1.56em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bcHDark,
+.bcDark{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.bcHDark{
+    display: none;
+    -webkit-animation: hideBc .3s ease-in-out;
+    animation: hideBc .3s ease-in-out;
+}
+
+.bcDark{
+    display: block;
+    background-color: var(--negro);
+    opacity: .75;
+    z-index: 2;
+    -webkit-animation: unHideBc .3s ease-in-out;
+    animation: unHideBc .3s ease-in-out;
+}
+
+.nav__menu_bar{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.375em;
+    cursor: pointer;
+    z-index: 9;
+}
+
+.menuAct.nav__menu_bar {
+    position: fixed;
+    right: 35px;
+    z-index: 4;
+}
+
+.burger{
+    width: 40px;
+    height: 4px;
+    background-color: var(--negro);
+    border-radius: 2px;
+    transition: all 300ms ease;
+}
+
+.nav__menu_bar:hover > .burger{
+    background-color: var(--celeste);
+}
+
+.nav__menu_bar .burger{
+    border-radius: 2px;
+    height: 3px;
+    width: 35px;
+}
+
+.enlacesM{
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    background: var(--blanco);
+    padding: 100px 0;
+    overflow: auto;
+    z-index: 3;
+    transition: all 300ms ease;
+}
+
+.enlacesMAct{
+    display: flex;
+}
+
+.a{
+    padding: 10px 35px;
+    background-color: var(--blanco);
+    font-weight: 500;
+    transition: all 300ms ease;
+}
+
+.a:hover{
+    background-color: #ededed;
+}
+
+.enlacesM .registro{
+    font-weight: 700;
+    border: none;
+    padding: 10px 35px;
+}
+
+.enlacesM .registro:hover{
+    color: var(--blanco);
+    background-color: var(--celeste);
+}
+
+.menuAct .burger:first-child{
+    -webkit-animation: menuAnim1 .3s ease-in-out forwards;
+    animation: menuAnim1 .3s ease-in-out forwards;
+}
+
+.menuAct .burger:nth-child(2){
+    -webkit-animation: menuAnim2 .3s ease-in-out forwards;
+    animation: menuAnim2 .3s ease-in-out forwards;
+}
+
+.menuAct .burger:nth-child(3){
+    -webkit-animation: menuAnim3 .3s ease-in-out forwards;
+    animation: menuAnim3 .3s ease-in-out forwards;
+}
+
+.menuDesAct .burger:first-child{
+    -webkit-animation: revmenuAnim1 .3s ease-in-out;
+    animation: revmenuAnim1 .3s ease-in-out;
+}
+
+.menuDesAct .burger:nth-child(2){
+    -webkit-animation: revmenuAnim2 .3s ease-in-out;
+    animation: revmenuAnim2 .3s ease-in-out;
+}
+
+.menuDesAct .burger:nth-child(3){
+    -webkit-animation: revmenuAnim3 .3s ease-in-out;
+    animation: revmenuAnim3 .3s ease-in-out;
+}
+
+@keyframes menuAppear {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 208px;
+    }
+}
+
+@keyframes menuAnim1 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: translateY(17.5px) rotate(45deg);
+    }
+}
+
+@keyframes menuAnim2 {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+@keyframes menuAnim3 {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(0) rotate(135deg);
+    }
+}
+
+@keyframes revmenuAnim1 {
+    0% {
+        transform: translateY(17.5px) rotate(45deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes revmenuAnim2 {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes revmenuAnim3 {
+    0% {
+        transform: rotate(135deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
+@keyframes hideBc {
+    0% {
+        opacity: 1;
+        background-color: #00000094;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes unHideBc {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes iconAppear {
+    0% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(270deg);
+    }
+}
+
+@keyframes iconDesAppear {
+    0% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}

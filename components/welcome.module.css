@@ -1,0 +1,15 @@
+.container{
+    padding: 1.25em 1.56em;
+    position: relative;
+}
+
+.title{
+    color: var(--celeste);
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.desc{
+    text-align: center;
+    margin-top: 0.9em;
+}

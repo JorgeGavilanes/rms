@@ -1,0 +1,112 @@
+.container{
+    background-color: var(--blanco);
+    padding: 1.5em 2em;
+    border-top-left-radius: 2.1875em;
+    border-top-right-radius: 2.1875em;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.25em;
+}
+
+.title{
+    font-size: 1.5em;
+}
+
+.inputText,
+.inputPass{
+    width: 100%;
+    font-size: 1em;
+    border-radius: 75em;
+    border: none;
+    background-color: var(--fondo);
+    padding: 1em 1.6875em;
+    font-family: 'Poppins';
+}
+
+.gap{
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+}
+
+.passContainer{
+    position: relative;
+}
+
+.icon{
+    height: 1.5em;
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: calc(50% - (1.5em / 2));
+    right: 1.6875em;
+}
+
+.show,
+.hide{
+    display: block;
+}
+
+.forgetpass{
+    display: flex;
+    justify-content: end;
+}
+
+.submit{
+    display: flex;
+    margin: 1em auto;
+    font-size: 1em;
+    font-family: 'Poppins';
+    padding: 0.8em 2em;
+    border: none;
+    border-radius: 2em;
+    color: var(--blanco);
+    background-color: var(--celesteClaro);
+    cursor: pointer;
+    transition: all 300ms ease;
+    margin-bottom: 1.5em;
+}
+
+.submit:hover,
+.submit:focus,
+.boton:hover{
+    background-color: var(--celeste);
+}
+
+/* .inputPass:-webkit-autofill,
+.inputPass:-webkit-autofill:focus,
+.inputText:-webkit-autofill,
+.inputText:-webkit-autofill:focus {
+    background-color: var(--blanco);
+} */
+
+.danger{
+    font-size: 1em;
+    color: var(--rojo);
+}
+
+.desc{
+    text-align: center;
+    margin: 0.9em 0;
+    padding: 1em 1.6875em;
+}
+
+.boton{
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    padding: 0.8em 2em;
+    margin: 0 auto;
+    font-size: 1em;
+    border: none;
+    border-radius: 2em;
+    color: var(--blanco);
+    background-color: var(--celesteClaro);
+    cursor: pointer;
+    transition: all 300ms ease;
+    margin-bottom: 1.5em;
+}
