@@ -11,7 +11,7 @@ export default function Restaurantes({data}){
                 {
                     data.map((restaurante, key) => {
                         return (
-                            <section>
+                            <section key={key}>
                                 <section>
                                     <img />
                                     <h2>{restaurante.nombre}</h2>
