@@ -8,6 +8,10 @@ const icons = {
         'happy':'/static/icons/happy.svg',
         'saludo':'/static/icons/saludo.svg',
         'add':'/static/icons/add.svg',
+        'users':'/static/icons/users.svg',
+        'home':'/static/icons/home.svg',
+        'logout':'/static/icons/logout.svg',
+        'locals':'/static/icons/locals.svg',
     }
 
 export default icons

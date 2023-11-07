@@ -40,7 +40,7 @@ export default function Nav() {
     )
 }
 
-export function NavAuth(){
+export function NavAuth({ rol }){
     const [navActive, setNavActive] = useState(false);
 
     function EnlaceStates({enlace, texto, icon}) {
