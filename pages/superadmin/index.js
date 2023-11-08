@@ -41,7 +41,7 @@ export default function Superadmin(){
             'admin' : 'admin@admin.com',
             'fecha' : '01 de diciembre del 2023',
             'nUsuarios' : 3,
-            'creditos' : 21
+            'creditos' : 1
         },
         {
             'id': 1,

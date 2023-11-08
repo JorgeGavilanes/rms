@@ -3,4 +3,54 @@
     background-color: var(--fondo);
     border-radius: 1em;
     margin: calc(.25em / 2) 1.56em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.restaurantes{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.restaurante{
+    background-color: var(--blanco);
+    border-radius: 1em;
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.05);
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.05);
+    -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.05);
+    padding: .75em 1em;
+    gap: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.restaurante_header{
+    padding-bottom: 0.5em;
+    border-bottom: solid 1px var(--fondo);
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.restaurante_cont_iconRes{
+    display: flex;
+    align-items: center;
+    padding: .3125em;
+    background-color: var(--fondo);
+    border-radius: .1875em;
+}
+
+.restaurante_iconRes{
+    filter: invert(0%) sepia(4%) saturate(7470%) hue-rotate(153deg) brightness(102%) contrast(101%);
+}
+
+.restaurante_title{
+    font-weight: 500;
+    line-height: 1em;
+}
+
+.icon{
+    width: 1.6875em;
 }
