@@ -1,6 +1,7 @@
 import { NavAuth } from "@/components/nav";
 import Restaurantes from "@/components/restaurantes";
 import Usuarios from "@/components/usuarios";
+import icons from "@/components/icons";
 
 export default function Superadmin(){
     const data = [
@@ -65,23 +66,23 @@ export default function Superadmin(){
         {
             'titulo' : 'Dashboard',
             'ruta' : '/superadmin',
-            'icon' : [Icons.home]
+            'icon' : [icons.home]
         },
         {
             'titulo' : 'Superadmins',
             'ruta' : '/superadmin',
-            'icon' : [Icons.users]
+            'icon' : [icons.users]
         },
         {
             'titulo' : 'Restaurantes',
             'ruta' : '/superadmin',
-            'icon' : [Icons.locals]
+            'icon' : [icons.locals]
         },
     ]
 
     return (
         <>
-            <NavAuth rol={0} data={superadminData}/>
+            <NavAuth rol={0} menu={superadminData}/>
             <main style={{gap:'.5em', display:'flex', flexDirection:'column'}}>
                 <Usuarios title={'Superadmins'} data={data}/>
                 <Restaurantes data={restaurantes}/>

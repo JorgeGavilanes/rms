@@ -33,7 +33,7 @@ export default function Nav() {
     )
 }
 
-export function NavAuth({ rol, data }){
+export function NavAuth({ rol, menubar }){
     const [navActive, setNavActive] = useState(false);
 
     function EnlaceStates({enlace, texto, icon}) {
@@ -64,7 +64,7 @@ export function NavAuth({ rol, data }){
             >
                 {
                     (rol === 0) &&
-                    data.map(e => {
+                    menubar.map(e => {
                         return (
                             <EnlaceStates enlace={e.ruta} icon={e.icon} texto={e.titulo}/>
                         )
