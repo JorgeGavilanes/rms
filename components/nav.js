@@ -64,9 +64,9 @@ export function NavAuth({ rol, menubar }){
             >
                 {
                     (rol === 0) &&
-                    menubar.map(e => {
+                    menubar.map((e, key) => {
                         return (
-                            <EnlaceStates enlace={e.ruta} icon={e.icon} texto={e.titulo}/>
+                            <EnlaceStates enlace={e.ruta} icon={e.icon} texto={e.titulo} key={key}/>
                         )
                     })
                 }
