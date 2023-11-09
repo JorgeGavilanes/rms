@@ -81,12 +81,13 @@ export function NavAuth({ rol }){
             className={`${navActive ? `${Styles.enlacesMAct}` : ""} ${Styles.enlacesM}`}
             >
                 {
-                    (rol === '0') &&
-                    Superadmin.map(e => {
-                        return (
-                            <EnlaceStates enlace={e.ruta} icon={e.icon} texto={e.titulo}/>
-                        )
-                    })
+                    (rol === 0) &&
+                    <>hola</>
+                    // Superadmin.map(e => {
+                    //     return (
+                    //         <EnlaceStates enlace={e.ruta} icon={e.icon} texto={e.titulo}/>
+                    //     )
+                    // })
                 }
                 <section className={Styles.footer} />
                 <EnlaceStates enlace={'/perfil'} icon={Icons.user} texto={'Editar perfil'}/>
