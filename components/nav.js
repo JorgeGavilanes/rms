@@ -36,7 +36,7 @@ export default function Nav() {
 export function NavAuth({ rol }){
     const [navActive, setNavActive] = useState(false);
 
-    const Superadmin = [
+    const superadminData = [
         {
             'titulo' : 'Dashboard',
             'ruta' : '/superadmin',
@@ -82,12 +82,11 @@ export function NavAuth({ rol }){
             >
                 {
                     (rol === 0) &&
-                    <>hola</>
-                    // Superadmin.map(e => {
-                    //     return (
-                    //         <EnlaceStates enlace={e.ruta} icon={e.icon} texto={e.titulo}/>
-                    //     )
-                    // })
+                    superadminData.map(e => {
+                        return (
+                            <EnlaceStates enlace={e.ruta} icon={e.icon} texto={e.titulo}/>
+                        )
+                    })
                 }
                 <section className={Styles.footer} />
                 <EnlaceStates enlace={'/perfil'} icon={Icons.user} texto={'Editar perfil'}/>
