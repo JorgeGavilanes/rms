@@ -17,7 +17,7 @@ export default function Usuarios({title, data, isAdmin}){
         <section className={Styles.container}>
             <h1 className={Styles.title}>{title}</h1>
             <Swiper
-                slidesPerView={4}
+                slidesPerView={2}
                 spaceBetween={10}
                 pagination={{
                     clickable: true,

@@ -13,3 +13,29 @@
 .enlace:hover img{
     filter: invert(37%) sepia(41%) saturate(2839%) hue-rotate(179deg) brightness(94%) contrast(101%);
 }
+
+.icon{
+    filter: invert(64%) sepia(75%) saturate(3813%) hue-rotate(175deg) brightness(90%) contrast(91%);
+    transition: all 300ms ease;
+    width: 1.3em;
+}
+
+.enlaceDanger{
+    padding: 0.625em 2.1875em;
+    background-color: var(--blanco);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    transition: all 300ms ease;
+    color: var(--rojo);
+}
+
+.enlaceDanger:hover{
+    background-color: #ededed;
+}
+
+.icon1{
+    width: 1.6875em;
+    margin-right: .5em;
+    filter: invert(9%) sepia(100%) saturate(6550%) hue-rotate(13deg) brightness(88%) contrast(117%);
+}

@@ -1,8 +1,8 @@
 .container{
-    padding: 1.25em 1.56em;
+    padding: 1.25em 1em;
     background-color: var(--fondo);
     border-radius: 1em;
-    margin: calc(.25em / 2) 1.56em;
+    margin: calc(.25em / 2) 1em;
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -27,11 +27,11 @@
 }
 
 .restaurante_header{
-    padding-bottom: 0.5em;
-    border-bottom: solid 1px var(--fondo);
     display: flex;
     align-items: center;
     gap: 1em;
+    border-bottom: solid 1px var(--fondo);
+    padding-bottom: 0.5em;
 }
 
 .restaurante_cont_iconRes{
@@ -53,4 +53,15 @@
 
 .icon{
     width: 1.6875em;
+}
+
+.restaurante_body{
+    display: flex;
+    flex-direction: column;
+    gap: .3em;
+}
+
+.restaurante_footer{
+    border-top: solid 1px var(--fondo);
+    padding-top: 0.5em;
 }

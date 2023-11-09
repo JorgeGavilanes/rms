@@ -7,14 +7,7 @@ import Icons from "./icons"
 import Link from "next/link";
 import { useState } from 'react';
 import UserNav from "./userNav";
-
-const enlaces = [
-    {
-        'texto' : 'Inicio',
-        'enlace' : '/',
-        'icon' : ''
-    }
-]
+import { Danger } from "./enlace";
 
 export default function Nav() {
     return(
@@ -43,6 +36,24 @@ export default function Nav() {
 export function NavAuth({ rol }){
     const [navActive, setNavActive] = useState(false);
 
+    const Superadmin = [
+        {
+            'titulo' : 'Dashboard',
+            'ruta' : '/superadmin',
+            'icon' : [Icons.home]
+        },
+        {
+            'titulo' : 'Superadmins',
+            'ruta' : '/superadmin',
+            'icon' : [Icons.users]
+        },
+        {
+            'titulo' : 'Restaurantes',
+            'ruta' : '/superadmin',
+            'icon' : [Icons.locals]
+        },
+    ]
+
     function EnlaceStates({enlace, texto, icon}) {
         return (
             <a
@@ -50,7 +61,7 @@ export function NavAuth({ rol }){
             className={Styles.a}
             onClick={() => {
                 setNavActive(false);
-            }}>{texto}</a>
+            }}><img src={icon} className={Styles.icon1}/>{texto}</a>
         )
     }
 
@@ -69,7 +80,17 @@ export function NavAuth({ rol }){
             <section
             className={`${navActive ? `${Styles.enlacesMAct}` : ""} ${Styles.enlacesM}`}
             >
-                <EnlaceStates enlace={"/"} texto={"INICIO"}/>
+                {
+                    (rol == 0) &&
+                    Superadmin.map(e => {
+                        return (
+                            <EnlaceStates enlace={e.ruta} icon={e.icon} texto={e.titulo}/>
+                        )
+                    })
+                }
+                <section className={Styles.footer} />
+                <EnlaceStates enlace={'/perfil'} icon={Icons.user} texto={'Editar perfil'}/>
+                <Danger icon={Icons.logout} ruta={''} title={'Cerrar sesión'}/>
             </section>
         </nav>
     )

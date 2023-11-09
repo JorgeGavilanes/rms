@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Styles from './restaurantes.module.css'
 import StylesA from './enlaces.module.css'
 import icons from './icons'
+import Enlace from './enlace'
 
 export default function Restaurantes({data}){
     return (
@@ -18,7 +19,7 @@ export default function Restaurantes({data}){
                                     </section>
                                     <h2 className={Styles.restaurante_title}>{restaurante.nombre}</h2>
                                 </section>
-                                <section>
+                                <section className={Styles.restaurante_body}>
                                     <p>
                                         <strong>Créditos: </strong>
                                         {restaurante.creditos}
@@ -36,10 +37,9 @@ export default function Restaurantes({data}){
                                         {restaurante.fecha}
                                     </p>
                                 </section>
-                                <a href={`restaurante/${restaurante.id}`}>
-                                    <img src={icons.show} className={Styles.icon}/>
-                                    Ver y editar
-                                </a>
+                                <section className={Styles.restaurante_footer}>
+                                    <Enlace ruta={`restaurante/${restaurante.id}`} icon={icons.show} title={'Ver y editar'}/>
+                                </section>
                             </section>
                         )
                     })
