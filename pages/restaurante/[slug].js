@@ -7,7 +7,7 @@ const Restaurante = ({ restaurante }) => {
     return(
         <div style={{background:`color3`}}>
             <NavPublic
-                logo="logod"
+                logo="logo"
                 title="title"
             />
             <CMenu />
