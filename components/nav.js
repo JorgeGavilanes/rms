@@ -33,7 +33,7 @@ export default function Nav() {
     )
 }
 
-export function NavAuth({ rol, superadminData }){
+export function NavAuth({ rol, data }){
     const [navActive, setNavActive] = useState(false);
 
     function EnlaceStates({enlace, texto, icon}) {
@@ -64,7 +64,7 @@ export function NavAuth({ rol, superadminData }){
             >
                 {
                     (rol === 0) &&
-                    superadminData.map(e => {
+                    data.map(e => {
                         return (
                             <EnlaceStates enlace={e.ruta} icon={e.icon} texto={e.titulo}/>
                         )
