@@ -10,7 +10,7 @@ const Restaurante = ({ restaurante }) => {
                 logo="logo"
                 title="title"
             />
-            <CMenu />d
+            <CMenu />
             <GuppyDigital />
         </div>
     )
