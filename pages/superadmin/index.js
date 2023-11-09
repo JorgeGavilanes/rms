@@ -61,9 +61,27 @@ export default function Superadmin(){
         }
     ]
 
+    const superadminData = [
+        {
+            'titulo' : 'Dashboard',
+            'ruta' : '/superadmin',
+            'icon' : [Icons.home]
+        },
+        {
+            'titulo' : 'Superadmins',
+            'ruta' : '/superadmin',
+            'icon' : [Icons.users]
+        },
+        {
+            'titulo' : 'Restaurantes',
+            'ruta' : '/superadmin',
+            'icon' : [Icons.locals]
+        },
+    ]
+
     return (
         <>
-            <NavAuth rol={0}/>
+            <NavAuth rol={0} superadminData={superadminData}/>
             <main style={{gap:'.5em', display:'flex', flexDirection:'column'}}>
                 <Usuarios title={'Superadmins'} data={data}/>
                 <Restaurantes data={restaurantes}/>
