@@ -80,14 +80,14 @@ export function NavAuth({ rol }){
             <section
             className={`${navActive ? `${Styles.enlacesMAct}` : ""} ${Styles.enlacesM}`}
             >
-                {/* {
-                    (rol == 0) &&
+                {
+                    (rol === '0') &&
                     Superadmin.map(e => {
                         return (
                             <EnlaceStates enlace={e.ruta} icon={e.icon} texto={e.titulo}/>
                         )
                     })
-                } */}
+                }
                 <section className={Styles.footer} />
                 <EnlaceStates enlace={'/perfil'} icon={Icons.user} texto={'Editar perfil'}/>
                 <Danger icon={Icons.logout} ruta={''} title={'Cerrar sesión'}/>

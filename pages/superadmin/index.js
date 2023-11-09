@@ -63,7 +63,7 @@ export default function Superadmin(){
 
     return (
         <>
-            <NavAuth rol={0}/>
+            <NavAuth rol={'0'}/>
             <main style={{gap:'.5em', display:'flex', flexDirection:'column'}}>
                 <Usuarios title={'Superadmins'} data={data}/>
                 <Restaurantes data={restaurantes}/>
