@@ -9,6 +9,24 @@ import { useState } from 'react';
 import UserNav from "./userNav";
 import { Danger } from "./enlace";
 
+const superadminData = [
+    {
+        'titulo' : 'Dashboard',
+        'ruta' : '/superadmin',
+        'icon' : [Icons.home]
+    },
+    {
+        'titulo' : 'Superadmins',
+        'ruta' : '/superadmin',
+        'icon' : [Icons.users]
+    },
+    {
+        'titulo' : 'Restaurantes',
+        'ruta' : '/superadmin',
+        'icon' : [Icons.locals]
+    },
+]
+
 export default function Nav() {
     return(
         <nav
@@ -35,24 +53,6 @@ export default function Nav() {
 
 export function NavAuth({ rol }){
     const [navActive, setNavActive] = useState(false);
-
-    const superadminData = [
-        {
-            'titulo' : 'Dashboard',
-            'ruta' : '/superadmin',
-            'icon' : [Icons.home]
-        },
-        {
-            'titulo' : 'Superadmins',
-            'ruta' : '/superadmin',
-            'icon' : [Icons.users]
-        },
-        {
-            'titulo' : 'Restaurantes',
-            'ruta' : '/superadmin',
-            'icon' : [Icons.locals]
-        },
-    ]
 
     function EnlaceStates({enlace, texto, icon}) {
         return (
