@@ -17,6 +17,10 @@
     height: 1px;
 }
 
+.separador:last-child{
+    background-color: transparent !important;
+}
+
 .gridTemplate{
     display: grid;
     grid-template-columns: 1fr repeat(1, minmax(auto, 6em));
@@ -50,5 +54,5 @@
 
 .categoria_producto_adicionales{
     font-weight: 500;
-    font-size: 1.125em;
+    font-size: 1em;
 }
