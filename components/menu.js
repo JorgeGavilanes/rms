@@ -17,14 +17,16 @@ export default function CMenu({data}){
                         style={{ backgroundColor : data.fondo}}
                     />
                     {
-                        categorias.map((categoria) => {
+                        categorias.map((categoria, key) => {
                             const productos = categoria.attributes.productos.data;
                             const adicionales = categoria.attributes.extras.data;
 
                             return (
                                 <>
                                     <section
-                                        className={Styles.gridTemplate}>
+                                        className={Styles.gridTemplate}
+                                        key={key}
+                                    >
                                         <h3
                                             className={Styles.categoria_titulo}
                                             style={{ color: data.color2 }}
@@ -33,10 +35,12 @@ export default function CMenu({data}){
                                     </section>
                                     {
                                         productos
-                                        .map((producto) => {
+                                        .map((producto, key1) => {
                                             return (
                                                 <section
-                                                    className={Styles.gridTemplate}>
+                                                    className={Styles.gridTemplate}
+                                                    key={key1}
+                                                >
                                                     <section className={Styles.categoria_producto}>
                                                         <h4 className={Styles.categoria_producto_titulo}>{producto.attributes.nombre}</h4>
                                                         <p className={Styles.categoria_producto_desc}>{producto.attributes.descripcion}</p>
@@ -47,9 +51,9 @@ export default function CMenu({data}){
                                         })
                                     }
                                     {
-                                        adicionales.map((adicional) => {
+                                        adicionales.map((adicional, key2) => {
                                             return (
-                                                <>
+                                                <section key={key2}>
                                                     <section
                                                         className={Styles.gridTemplate}>
                                                         <h3
@@ -62,7 +66,7 @@ export default function CMenu({data}){
                                                         <h4 className={Styles.categoria_producto_titulo}>{adicional.attributes.nombre}</h4>
                                                         <h4 className={Styles.categoria_producto_precio}>${adicional.attributes.precio}</h4>
                                                     </section>
-                                                </>
+                                                </section>
                                             )
                                         })
                                     }
